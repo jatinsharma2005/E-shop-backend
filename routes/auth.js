@@ -1,10 +1,13 @@
 const router = require("express").Router();
+const dotenv = require("dotenv");
+dotenv.config();
 const User = require("../models/user");
 const cryptoJS = require("crypto-js");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const sendEmail = require("../helpers/sendEmail");
 const { createResetEmailHTML } = require("../helpers/orderConfrimation");
+const LOCAL_URL = process.env.LOCAL;
 
 //Register
 router.post("/register", async (req, res) => {
@@ -155,7 +158,7 @@ router.post("/forgotpass", async (req, res) => {
         .json({ sucess: false, message: "user with this email not exist" });
 
     //sending email thing
-    const resetURl = `http://localhost:3000/resetpassword/${resetToken}`;
+    const resetURl = `${LOCAL_URL}/resetpassword/${resetToken}`;
 
     const emailtext = `
       you have requested a password reset
