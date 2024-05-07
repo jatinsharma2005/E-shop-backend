@@ -90,7 +90,7 @@ const createOrderTemplate = (order) => {
                 <h1>Order Update</h1>
                 <h2>${TotalPriceWithRazorpayFee} Rs.</h2> 
                 <p >Hello ${userInfo.name},</p>
-                <P>Thank you for shopping with Satnam creation we have recived
+                <P>Thank you for shopping with E-SHOP we have recived
                     your order and will get started on it right away.
                     Once your order has bgen procgssgd and is on its
                     way, we'll send you a shipping confirmation with
@@ -162,7 +162,7 @@ const createResetEmailHTML = (userName, url) => {
       <body>
         <div class="container" >
           <div class="firstcontainer" style="box-shadow: 0 2px 2px -2px rgba(0,0,0,.5)">
-            <h1 style="margin: 10px 0px" class="center">Satnam creation</h1>
+            <h1 style="margin: 10px 0px" class="center">E-SHOP</h1>
             <p style="margin: 10px 0px;" class="center" >Reset password</p></div>
             <div class="secondcontainer">
               <p style="margin-bottom: 10px;">hi ${userName}</p>
